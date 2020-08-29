@@ -1,0 +1,47 @@
+<div style="background-color: blue;">
+    <h1 style="color: white; text-align:center; margin: 0 0 0 0;">CRUD</h1>
+</div>
+
+<div style="margin-top: 20px; margin-bottom: 20px;">
+    <button type="button" style="margin:auto;display:block" class="btn btn-outline-primary" onclick="window.location.href='./crearProducto'">Agregar Producto</button>
+</div>
+
+<div style="width: 50%; margin-left: 25%; margin-right: 25%;">
+    <p style="text-align: center;">Lista de productos: </p>
+    <div style="width: 70%; margin-left: 15%; margin-right: 15%;">
+        {{#each products}}
+            <div style="background-color:gainsboro; margin-top: 20px;">
+                <p style="text-align: center;">{{id}} - {{ name}}</p>
+                <div class="row">
+                    <div style="margin-left: 100px;" >
+                        <form action="/productos/{{id}}">
+                            <input class="btn btn-outline-dark btn-sm form-group" type="submit" value="Ver" >
+                        </form>
+                    </div>
+                    <div style="margin-left: 40px;" >
+                        <form action="productos/{{id}}/editarProducto">
+                            <input class="btn btn-outline-secondary btn-sm form-group" type="submit" value="Editar">
+                        </form>
+                    </div>
+                    <div style="margin-left: 40px;" >
+                        <form method="POST" action="/productos/{{ id }}?_method=DELETE">
+                            <input class="btn btn-outline-danger btn-sm form-group" type="submit" value="Borrar">
+                        </form>
+                    </div>
+                </div>
+
+            </div>
+            
+            
+        
+        {{/each}}
+
+    </div>
+    
+
+</div>
+
+
+
+
+
