@@ -1,17 +1,28 @@
-<form method="POST" action="/productos">
-    <div>
-        <label for="name">Nombre del producto: </label>
-        <input type="text" id="name" name="name">
-    </div>
-    <div>
-        <label for="description">Descripcion: </label>
-        <input type="text" id="description" name="description">
-    </div>
-    <div>
-        <label for="price">Precio: </label>
-        <input type="text" id="price" name="price">
-    </div>
-    <div>
-        <input type="submit" value="Agregar">
-    </div>
-</form>
+<div style="background-color: blue;">
+    <h1 style="color: white; text-align:center; margin: 0 0 0 0;">Crear Producto</h1>
+</div>
+
+<div style="margin-top: 100px; width: 50%; margin-left: 25%;">
+    <form method="POST" action="/productos"  >
+
+        <div style="background-color: gainsboro; margin-top: 10px;">
+            <div class="form-group">
+                <label for="name" style="margin-left: 20%;">Nombre del producto: </label>
+                <input type="text" id="name" name="name">
+            </div>
+            <div class="form-group">
+                <label for="description" style="margin-left: 20%;">Descripcion: </label>
+                <input type="text" id="description" name="description">
+            </div>
+            <div class="form-group">
+                <label for="price" style="margin-left: 20%;"> Precio: </label>
+                <input type="text" id="price" name="price">
+            </div>
+            <div class="form-group" style="margin-bottom: 10%;">
+                <input type="submit" class="btn btn-outline-success"  style="margin:auto;display:block;" value="Agregar">
+            </div>
+
+        </div>
+        
+    </form>
+</div>

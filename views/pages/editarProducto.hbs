@@ -1,19 +1,28 @@
-<h1>Editar Producto </h1>
+<div style="background-color: blue;">
+    <h1 style="color: white; text-align:center; margin: 0 0 0 0;">Editar Producto</h1>
+</div>
 
-<form method="POST" action="/productos/{{ producto.id }}?_method=PUT">
-    <div>
-        <label for="name">Nombre del producto: </label>
-        <input type="text" id="name" name="name" value="{{producto.name}}">
-    </div>
-    <div>
-        <label for="description">Descripcion: </label>
-        <input type="text" id="description" name="description" value="{{producto.description}}">
-    </div>
-    <div>
-        <label for="price">Precio: </label>
-        <input type="text" id="price" name="price" value="{{producto.price}}">
-    </div>
-    <div>
-        <input type="submit" value="Editar ?">
-    </div>
-</form>
+<div style="margin-top: 100px; width: 50%; margin-left: 25%;">
+    <form method="POST" action="/productos/{{ producto.id }}?_method=PUT">
+
+        <div style="background-color: gainsboro; margin-top: 10px;">
+            <div>
+                <label for="name">Nombre del producto: </label>
+                <input type="text" id="name" name="name" value="{{producto.name}}">
+            </div>
+            <div>
+                <label for="description">Descripcion: </label>
+                <input type="text" id="description" name="description" value="{{producto.description}}">
+            </div>
+            <div>
+                <label for="price">Precio: </label>
+                <input type="text" id="price" name="price" value="{{producto.price}}">
+            </div>
+            <div>
+                <input type="submit" value="Editar">
+            </div>
+
+        </div>
+        
+    </form>
+</div>

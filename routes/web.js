@@ -20,7 +20,7 @@ router.get('/productos/:id', PagesController.obtenerProducto);
 
 router.get('/productos/:id/editarProducto', PagesController.editarProducto);
 
-router.post('/productos/:id', urlendecodedParser, PagesController.actualizarProducto);
+router.put('/productos/:id', urlendecodedParser, PagesController.actualizarProducto);
 
 router.delete('/productos/:id', urlendecodedParser, PagesController.eliminarProducto);
 

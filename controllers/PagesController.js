@@ -31,7 +31,7 @@ exports.guardarProducto = (req, res) => {
     }
 
     ProductModel.insertarProducto(producto).then((id) => {
-        res.redirect('/');
+        //res.redirect('/');
     });
 }
 
